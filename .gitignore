@@ -1,0 +1,29 @@
+# Ignorar a pasta node_modules (dependências npm/yarn)
+/node_modules
+
+# Ignorar arquivos gerados pelo sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar a pasta android/build (arquivos de build Android)
+/android
+
+# Ignorar a pasta ios/build (arquivos de build iOS)
+/ios
+
+# Ignorar a pasta logs (arquivos de log)
+/logs
+
+# Ignorar arquivos de ambiente (por exemplo, .env e .env.local)
+.env
+.env.local
+
+# Ignorar arquivos de cobertura de teste
+/coverage
+
+# Ignorar arquivos de configuração de IDE (por exemplo, Visual Studio Code)
+.vscode/
+
+# Ignorar arquivos de cache ou temporários
+/cache/
+/temp/
