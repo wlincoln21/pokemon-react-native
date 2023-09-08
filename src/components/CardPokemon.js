@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, Image, StyleSheet, ScrollView, FlatList, TextInput } from 'react-native';
+import { View, Text, Button, Image, StyleSheet, ScrollView, FlatList, TextInput, TouchableOpacity } from 'react-native';
 
 const CardPokemon = () => {
     const [pokemonList, setPokemonList] = useState([]);
@@ -63,7 +63,14 @@ const CardPokemon = () => {
                 />
             )}
 
-            <Button style={styles.button} title="Recarregar" onPress={fetchPokemonInfo} />
+            <View style={styles.buttonContainer}>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={fetchPokemonInfo}
+                >
+                    <Text style={styles.buttonText}>Recarregar</Text>
+                </TouchableOpacity>
+            </View>
 
         </View>
     );
@@ -102,8 +109,20 @@ const styles = StyleSheet.create({
         height: 100,
         marginTop: 10,
     },
+    buttonContainer: {
+        marginTop: 10,
+        marginBottom: 20, // Adicione margem inferior para separar do próximo elemento
+    },
     button: {
-        backgroundColor: '#FAC705'
+        backgroundColor: '#FAC705',
+        padding: 10,
+        borderRadius: 5,
+    },
+    buttonText: {
+        color: '#000',
+        textAlign: 'center',
+        fontSize: 16,
+        fontWeight: 'bold',
     },
 });
 
